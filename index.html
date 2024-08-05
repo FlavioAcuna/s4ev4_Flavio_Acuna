@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Picnic</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1 class="text-center">
+            Verifica si es buen momento para un picnic
+          </h1>
+          <form id="picnicForm">
+            <div class="form-group">
+              <label for="temperatura">Temperatura actual (°C):</label>
+              <input
+                type="number"
+                id="temperatura"
+                class="form-control"
+                step="0.1"
+                placeholder="Ingrese la temperatura"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="tiempoLibre"
+                >Tiempo libre disponible (minutos):</label
+              >
+              <input
+                type="number"
+                id="tiempoLibre"
+                class="form-control"
+                placeholder="Ingrese el tiempo libre"
+                required
+              />
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" id="lluvia" class="form-check-input" />
+              <label for="lluvia" class="form-check-label"
+                >Está lloviendo</label
+              >
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              onclick="verificarPicnic()"
+            >
+              Verificar
+            </button>
+          </form>
+          <h2 id="resultado" class="text-center mt-3"></h2>
+        </div>
+      </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./asset/js/app.js"></script>
+  </body>
+</html>
